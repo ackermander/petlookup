@@ -62,6 +62,11 @@ public class SignInAction extends ActionSupport implements ModelDriven<Remember>
 		return null;
 	}
 	
+	public String hosSignIn(){
+		
+		return null;
+	}
+	
 	public Writer getOut() throws IOException{
 		return ServletActionContext.getResponse().getWriter();
 
