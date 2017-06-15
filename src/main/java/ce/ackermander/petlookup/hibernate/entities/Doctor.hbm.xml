@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 5, 2017 1:35:42 PM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="ce.ackermander.petlookup.hibernate.entities.Doctor" table="DOCTOR">
+        <id name="doctorId" type="java.lang.Integer">
+            <column name="DOCTORID" />
+            <!-- <generator class="foreign">
+            	<param name="property">doctorId</param>
+            </generator> -->
+			<generator class="native"/> 
+        </id>
+        <property name="doctorName" type="java.lang.String">
+            <column name="DOCTORNAME" />
+        </property>
+        <property name="doctorStatue" type="int">
+            <column name="DOCTORSTATUE" />
+        </property>
+        <property name="doctorPic" type="java.lang.String">
+            <column name="DOCTORPIC" />
+        </property>
+        <many-to-one name="hospital" class="ce.ackermander.petlookup.hibernate.entities.Hospital" fetch="join">
+            <column name="HOSPITAL" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

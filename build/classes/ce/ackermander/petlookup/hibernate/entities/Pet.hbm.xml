@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 5, 2017 1:35:42 PM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="ce.ackermander.petlookup.hibernate.entities.Pet" table="PET">
+        <id name="petId" type="int">
+            <column name="PETID" />
+            <generator class="native" />
+        </id>
+        <property name="petDescription" type="java.lang.String">
+            <column name="PETDESCRIPTION" />
+        </property>
+        <property name="findDate" type="java.util.Date">
+            <column name="FIND_DATE" />
+        </property>
+        <many-to-one name="firstHelper" class="ce.ackermander.petlookup.hibernate.entities.Remember" fetch="join">
+            <column name="FIRSTHELPER" />
+        </many-to-one>
+        <many-to-one name="owner" class="ce.ackermander.petlookup.hibernate.entities.Remember" fetch="join">
+            <column name="OWNER" />
+        </many-to-one>
+        <one-to-one name="vaccine" class="ce.ackermander.petlookup.hibernate.entities.Vaccine"></one-to-one>
+        <set name="pics" table="PETPICTURE" inverse="false" lazy="true">
+            <key>
+                <column name="PET_ID" />
+            </key>
+            <one-to-many class="ce.ackermander.petlookup.hibernate.entities.PetPicture" />
+        </set>
+        <property name="isAdopt" type="int">
+        	<column name="IS_ADOPT"></column>
+        </property>
+    </class>
+</hibernate-mapping>

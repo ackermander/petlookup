@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 5, 2017 1:35:42 PM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="ce.ackermander.petlookup.hibernate.entities.VaccineCount" table="VACCINECOUNT">
+        <id name="countId" type="java.lang.Integer">
+            <column name="COUNTID" />
+            <generator class="assigned" />
+        </id>
+        <property name="count" type="int">
+            <column name="COUNT" />
+        </property>
+        <property name="countName" type="java.lang.String">
+            <column name="COUNTNAME" />
+        </property>
+        <property name="vacDate" type="java.util.Date">
+            <column name="VACDATE" />
+        </property>
+        <property name="docFee" type="float">
+            <column name="DOCFEE" />
+        </property>
+        <many-to-one name="operator" class="ce.ackermander.petlookup.hibernate.entities.Doctor" fetch="join">
+            <column name="OPERATOR" />
+        </many-to-one>
+        <set name="medicines" table="MEDICINE" inverse="false" lazy="true">
+            <key>
+                <column name="COUNTID" />
+            </key>
+            <one-to-many class="ce.ackermander.petlookup.hibernate.entities.Medicine" />
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="EclipseModuleManager">
+    <libelement value="jar://$MODULE_DIR$/bin/antlr-2.7.7.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/bin/cdi-api-1.1.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/bin/classmate-1.3.0.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/bin/dom4j-1.6.1.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/bin/el-api-2.2.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/bin/geronimo-jta_1.1_spec-1.1.1.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/bin/hibernate-commons-annotations-5.0.1.Final.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/bin/hibernate-core-5.2.6.Final.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/bin/hibernate-jpa-2.1-api-1.0.0.Final.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/bin/jandex-2.0.3.Final.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/bin/javassist-3.20.0-GA.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/bin/javax.inject-1.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/bin/jboss-interceptors-api_1.1_spec-1.0.0.Beta1.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/bin/jboss-logging-3.3.0.Final.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/bin/jsr250-api-1.0.jar!/" />
+    <conelement value="org.springsource.ide.eclipse.gradle.classpathcontainer" />
+    <conelement value="org.eclipse.jst.j2ee.internal.module.container" />
+    <conelement value="org.eclipse.jst.j2ee.internal.web.container" />
+    <conelement value="org.eclipse.jst.server.core.container/org.eclipse.jst.server.tomcat.runtimeTarget/Apache Tomcat v9.0" />
+    <src_description expected_position="0">
+      <src_folder value="file://$MODULE_DIR$/src/main/java" expected_position="0" />
+    </src_description>
+  </component>
+  <component name="NewModuleRootManager">
+    <output url="file://$MODULE_DIR$/build/classes" />
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
+    </content>
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="jdk" jdkName="1.8" jdkType="JavaSDK" />
+    <orderEntry type="library" exported="" name="org.springsource.ide.eclipse.gradle.classpathcontainer" level="application" />
+    <orderEntry type="library" exported="" name="org.eclipse.jst.j2ee.internal.module.container" level="application" />
+    <orderEntry type="library" exported="" name="org.eclipse.jst.j2ee.internal.web.container" level="application" />
+    <orderEntry type="library" exported="" name="org.eclipse.jst.server.core.container/org.eclipse.jst.server.tomcat.runtimeTarget/Apache Tomcat v9.0" level="application" />
+    <orderEntry type="module-library">
+      <library name="junit4">
+        <CLASSES>
+          <root url="jar://$APPLICATION_HOME_DIR$/lib/junit-4.12.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="antlr-2.7.7.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/bin/antlr-2.7.7.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="cdi-api-1.1.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/bin/cdi-api-1.1.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="classmate-1.3.0.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/bin/classmate-1.3.0.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="dom4j-1.6.1.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/bin/dom4j-1.6.1.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="el-api-2.2.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/bin/el-api-2.2.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="geronimo-jta_1.1_spec-1.1.1.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/bin/geronimo-jta_1.1_spec-1.1.1.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="hibernate-commons-annotations-5.0.1.Final.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/bin/hibernate-commons-annotations-5.0.1.Final.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="hibernate-core-5.2.6.Final.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/bin/hibernate-core-5.2.6.Final.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="hibernate-jpa-2.1-api-1.0.0.Final.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/bin/hibernate-jpa-2.1-api-1.0.0.Final.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="jandex-2.0.3.Final.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/bin/jandex-2.0.3.Final.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="javassist-3.20.0-GA.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/bin/javassist-3.20.0-GA.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="javax.inject-1.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/bin/javax.inject-1.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="jboss-interceptors-api_1.1_spec-1.0.0.Beta1.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/bin/jboss-interceptors-api_1.1_spec-1.0.0.Beta1.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="jboss-logging-3.3.0.Final.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/bin/jboss-logging-3.3.0.Final.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="jsr250-api-1.0.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/bin/jsr250-api-1.0.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+  </component>
+</module>

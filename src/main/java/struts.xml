@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+    <constant name="struts.enable.DynamicMethodInvocation" value="false" />
+    <constant name="struts.devMode" value="true" />
+	<constant name="struts.action.extension" value="android,,"/>    
+
+    <package name="default" namespace="/android" extends="struts-default">
+
+<!--  		<interceptors>
+ 			<interceptor-stack name="filestack">
+ 				<interceptor-ref name="defalultStack">
+ 					<param name="fileUpload.maxmiumSize">3000</param>
+ 					<param name="fileUpload.allowedTypes">image/*</param>
+ 					<param name="fileUpload.allowedExtensions">bmp,png,img</param>
+ 				</interceptor-ref>
+ 			</interceptor-stack>
+ 		</interceptors>
+ 		<default-interceptor-ref name="filestack"></default-interceptor-ref> -->
+        <default-action-ref name="index" />
+<!-- 	
+        <global-results>
+            <result name="error">/WEB-INF/error.html</result>
+        </global-results>
+
+        <global-exception-mappings>
+            <exception-mapping exception="java.lang.Exception" result="error"/>
+        </global-exception-mappings>
+ -->
+ 		
+ 		<action name="testaction" class="testAction" method="test">
+ 		
+ 			<result name="success">/success.jsp</result>
+ 		</action>
+ 		
+ 		<action name="directAction" class="directAction" method="directAction"/>
+ 		
+ 		<action name="sqlaction" class="sqlaction" method="register">
+ 			<result name="register">/success.jsp</result>
+ 		</action>
+ 		
+ 		<action name="signin-action" class="signinAction" method="signin"/>
+ 		
+ 		<action name="getpets-action" class="getPetsAction" method="getPets"/>
+ 		<action name="release-action" class="releaseAction" method="releaseByRemember"/>
+		
+    </package>
+    <!-- Add packages here -->
+
+</struts>

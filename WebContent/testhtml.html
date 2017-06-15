@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<a href="testaction">test</a>
+<br>
+<a href="android/directAction.android?sql=select * from MISSION">directAction</a>
+<br>
+<form action="android/sqlaction.android" method="post" enctype="multipart/form-data">
+	<input type="file" name="img" label="IMGFile ">
+	<input type="submit">
+</form>
+<br>
+<form action="android/sqlaction.android" method="post">
+	<input type="text" name="usrn">
+	<input type="text" name="phon">
+	<input type="password" name="pswd">
+	
+	<input type="submit">
+</form>
+<form action="android/signin-action.android" method="post">
+	<input type="text" name="rememberName">
+	<input type="text" name="phone">
+	<input type="password" name="pswd">
+	
+	<input type="submit">
+</form>
+<br>
+<a href="android/getpets-action.android">getPets</a>
+<br>
+<form action="android/release-action.android" method="post" enctype="multipart/form-data">
+	<input type="text" name="petDescription">
+	<input type="file" name="img"/>
+	
+	<input type="submit"> 
+</form>
+<br>
+<form action="android/release-action.android" method="post" enctype="multipart/form-data">
+	<input type="file" name="img" label="IMGFile ">
+	<input type="submit">
+</form>
+</body>
+</html>

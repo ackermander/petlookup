@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 5, 2017 1:35:42 PM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="ce.ackermander.petlookup.hibernate.entities.Remember" table="REMEMBER">
+        <id name="id" type="java.lang.Integer">
+            <column name="ID" />
+            <generator class="native" />
+        </id>
+        <property name="isAdopt" type="int">
+            <column name="IS_ADOPT" />
+        </property>
+        <property name="blance" type="float">
+            <column name="BLANCE" />
+        </property>
+        <property name="rememberName" type="java.lang.String">
+            <column name="REMEMBER_NAME" />
+        </property>
+        <property name="phone" type="java.lang.String">
+            <column name="PHONE" />
+        </property>
+        <property name="accountKind" type="int">
+            <column name="ACCOUNT_KIND" />
+        </property>
+        <property name="statue" type="int">
+            <column name="STATUE" />
+        </property>
+        <property name="registerDate" type="java.util.Date">
+            <column name="REGISTER_DATE" />
+        </property>
+        <property name="remPicture" type="java.lang.String">
+            <column name="REM_PICTURE" />
+        </property>
+        <set name="missionJoined" table="MISSION_JOINED" inverse="false" lazy="true">
+            <key>
+                <column name="REM_ID" />
+            </key>
+            <many-to-many class="ce.ackermander.petlookup.hibernate.entities.Mission" column="MIS_ID" />
+        </set>
+        <set name="missionProposer" table="MISSION_PROPOSER" inverse="false" lazy="true">
+            <key>
+                <column name="REM_ID" />
+            </key>
+            <many-to-many class="ce.ackermander.petlookup.hibernate.entities.Mission" column="MIS_ID"/>
+        </set>
+        
+		<set name="judgements" table="JUDGEMENT" inverse="false" lazy="true">
+            <key>
+                <column name="CHECK_REM" />
+            </key>
+            <one-to-many class="ce.ackermander.petlookup.hibernate.entities.Judgement" />
+        </set>
+        <set name="checked" table="JUDGEMENT" inverse="false" lazy="true">
+            <key>
+                <column name="JUDGE_REM" />
+            </key>
+            <one-to-many class="ce.ackermander.petlookup.hibernate.entities.Judgement" />
+        </set>
+        <set name="pets" table="PET" inverse="false" lazy="true">
+            <key>
+                <column name="OWNER" />
+            </key>
+            <one-to-many class="ce.ackermander.petlookup.hibernate.entities.Pet" />
+        </set>
+        <many-to-one name="secure" class="ce.ackermander.petlookup.hibernate.entities.Security" fetch="join">
+            <column name="SECURE" />
+        </many-to-one>
+        <one-to-one name="doctor" class="ce.ackermander.petlookup.hibernate.entities.Doctor"/>
+        <one-to-one name="hospital" class="ce.ackermander.petlookup.hibernate.entities.Hospital"/>
+    </class>
+</hibernate-mapping>

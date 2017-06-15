@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 5, 2017 1:35:42 PM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="ce.ackermander.petlookup.hibernate.entities.Medicine" table="MEDICINE">
+        <id name="medId" type="java.lang.Integer">
+            <column name="MEDID" />
+            <generator class="assigned" />
+        </id>
+        <property name="medicineName" type="java.lang.String">
+            <column name="MEDICINENAME" />
+        </property>
+        <property name="medicinePrice" type="float">
+            <column name="MEDICINEPRICE" />
+        </property>
+    </class>
+</hibernate-mapping>

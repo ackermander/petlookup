@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 5, 2017 1:35:42 PM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="ce.ackermander.petlookup.hibernate.entities.Judgement" table="JUDGEMENT">
+        <id name="judgeId" type="java.lang.Integer">
+            <column name="JUDGEID" />
+            <generator class="assigned" />
+        </id>
+        <property name="opinion" type="java.lang.String">
+            <column name="OPINION" />
+        </property>
+        <property name="viewpoint" type="int">
+            <column name="VIEWPOINT" />
+        </property>
+        <many-to-one name="checkRem" class="ce.ackermander.petlookup.hibernate.entities.Remember" fetch="join">
+            <column name="CHECK_REM" />
+        </many-to-one>
+        <many-to-one name="judgeRem" class="ce.ackermander.petlookup.hibernate.entities.Remember" fetch="join">
+            <column name="JUDGE_REM" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

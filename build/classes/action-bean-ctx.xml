@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean id="testAction" scope="prototype" class="ce.ackermander.petlookup.struts2.actions.ActionTest"></bean>
+	
+	<bean id="directAction" scope="prototype" class="ce.ackermander.petlookup.struts2.actions.android.DirectSQLAction"></bean>
+	<bean id="sqlaction" scope="prototype" class="ce.ackermander.petlookup.struts2.actions.android.RegisterAction"></bean>
+	<bean id="signinAction" scope="prototype" class="ce.ackermander.petlookup.struts2.actions.android.SignInAction"></bean>
+	<bean id="getPetsAction" scope="prototype" class="ce.ackermander.petlookup.struts2.actions.android.PetAction"></bean>
+	<bean id="releaseAction" scope="prototype" class="ce.ackermander.petlookup.struts2.actions.android.PetReleaseAction"></bean>
+</beans>
