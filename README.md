@@ -1,3 +1,3 @@
 # petlookup
 pictureshot for .mwb
-![image](https://github.com/ackermander/petlookup/tree/master/sql/shot.png)
+![image](https://github.com/ackermander/petlookup/blob/master/sql/shot.png)
