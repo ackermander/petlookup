@@ -12,12 +12,16 @@ import java.util.Set;
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.apache.struts2.ServletActionContext;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpRequest;
 
 import com.opensymphony.xwork2.ActionSupport;
 
+import ce.ackermander.petlookup.hibernate.entities.Doctor;
+import ce.ackermander.petlookup.hibernate.entities.Hospital;
 import ce.ackermander.petlookup.hibernate.entities.Remember;
 import ce.ackermander.petlookup.hibernate.entities.Security;
 import ce.ackermander.petlookup.hibernate.services.DaoService;
@@ -113,6 +117,44 @@ public class RegisterAction extends ActionSupport{
 	}
 	public String getFileExt(String contentType){
 		return "." + contentType.split("/")[1];
+	}
+	public HttpSession getSession(){
+		return ServletActionContext.getRequest().getSession();
+	}
+	public HttpServletRequest getRequest(){
+		return ServletActionContext.getRequest();
+	}
+	public String doctorReg() throws IOException{
+		Remember rem = (Remember) getSession().getAttribute("remb");
+		if(rem != null){
+			String regCode = getRequest().getParameter("remb");
+			String hosId = getRequest().getParameter("hosid");
+			int id = Integer.parseInt(hosId);
+			List<Hospital> list = (List<Hospital>) ds.select("FROM Hospital WHERE id = ?", id);
+			if(list == null || list.size() == 0){
+				getOut().write("没有医院");
+				return null;
+			}
+			Hospital hos = list.get(0);
+			if(hos.getRegisterCode() == regCode){
+				getOut().write("医生注册成功");
+				Doctor doc = new Doctor();
+				doc.setDoctorId(rem.getId());
+				doc.setDoctorName(rem.getRememberName());
+				doc.setDoctorStatue(1);
+				doc.setHospital(hos);
+				hos.getDoctors().add(doc);
+				ds.save(doc);
+				ds.update(hos);
+				return null;
+			}else{
+				getOut().write("注册码错误");
+				return null;
+			}
+		}else{
+			getOut().write("请登录");
+		}
+		return null;
 	}
 	public String picUpload(String type,String filename){
 		String url = null;

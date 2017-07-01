@@ -67,6 +67,11 @@ public class Remember {
 	private float blance;
 	private String rememberName;
 	private String phone;
+	//账号类型
+	public static final int KIND_REMEMBER = 0;
+	public static final int KIND_HOSPITAL = 1;
+	public static final int KIND_DOCTOR = 2;
+	
 	private int accountKind;
 	private int statue;
 	private String remPicture;

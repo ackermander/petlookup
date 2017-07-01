@@ -14,6 +14,8 @@ import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
 
+import ce.ackermander.petlookup.hibernate.entities.Doctor;
+import ce.ackermander.petlookup.hibernate.entities.Hospital;
 import ce.ackermander.petlookup.hibernate.entities.Remember;
 import ce.ackermander.petlookup.hibernate.entities.Security;
 import ce.ackermander.petlookup.hibernate.services.DaoService;
@@ -49,7 +51,18 @@ public class SignInAction extends ActionSupport implements ModelDriven<Remember>
 					return null;
 				}
 				session.setAttribute("remb", list.get(0));
+				if(list.get(0).getAccountKind() == Remember.KIND_HOSPITAL){
+					List<Hospital> hos = (List<Hospital>) ds.select("FROM Hospital h WHERE h.id = ?", list.get(0).getId());
+					session.setAttribute("hos", hos);
+					getOut().write("医院账号登录");
+					return null;
+				}else if(list.get(0).getAccountKind() == Remember.KIND_DOCTOR){
+					List<Doctor> doc = (List<Doctor>) ds.select("FROM Doctor d WHERE d.doctorId = ?", list.get(0).getId());
+					session.setAttribute("doc", doc);
+					getOut().write("医生登录成功");
+				}
 				getOut().write("登录成功");
+				return null;
 			}else{
 				session.setAttribute("remb", null);
 				System.out.println("2");
@@ -58,11 +71,6 @@ public class SignInAction extends ActionSupport implements ModelDriven<Remember>
 		}else{
 			getOut().write("已登录");
 		}
-		
-		return null;
-	}
-	
-	public String hosSignIn(){
 		
 		return null;
 	}

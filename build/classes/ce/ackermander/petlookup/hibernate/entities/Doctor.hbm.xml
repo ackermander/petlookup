@@ -9,7 +9,7 @@
             <!-- <generator class="foreign">
             	<param name="property">doctorId</param>
             </generator> -->
-			<generator class="native"/> 
+			<generator class="assigned"/> 
         </id>
         <property name="doctorName" type="java.lang.String">
             <column name="DOCTORNAME" />

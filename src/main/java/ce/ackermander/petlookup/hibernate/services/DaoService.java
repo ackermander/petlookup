@@ -30,6 +30,10 @@ public class DaoService {
 		base.insert(o);
 	}
 	
+	public void update(Object o){
+		base.update(o);
+	}
+	
 	public Object select(String hql, Object ... objects){
 		
 		return base.select(hql, objects);

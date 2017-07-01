@@ -39,15 +39,15 @@
  		
  		<action name="directAction" class="directAction" method="directAction"/>
  		
- 		<action name="sqlaction" class="sqlaction" method="register">
- 			<result name="register">/success.jsp</result>
- 		</action>
- 		
+ 		<action name="sqlaction" class="sqlaction" method="register"/>
+		<action name="sqlactionDoc" class="sqlaction" method="doctorReg"/>
+		 		
  		<action name="signin-action" class="signinAction" method="signin"/>
  		
  		<action name="getpets-action" class="getPetsAction" method="getPets"/>
  		<action name="release-action" class="releaseAction" method="releaseByRemember"/>
-		
+ 		
+				
     </package>
     <!-- Add packages here -->
 
